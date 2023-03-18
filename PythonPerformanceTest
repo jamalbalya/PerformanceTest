@@ -1,0 +1,15 @@
+import timeit
+
+def my_function():
+    # Replace with the code you want to performance test
+    result = 0
+    for i in range(1000000):
+        result += i
+    return result
+
+num_runs = 10  # Replace with the number of times to run the function
+run_time = timeit.timeit(my_function, number=num_runs)
+
+average_time = run_time / num_runs
+print(f"Performance test results for {num_runs} runs of my_function:")
+print(f"Average run time: {average_time:.6f}s")
